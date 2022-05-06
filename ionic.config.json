@@ -1,0 +1,7 @@
+{
+  "name": "frontend-challenge-roberto-castilho",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
