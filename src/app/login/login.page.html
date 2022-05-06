@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true">
+
+  <div class="login-top">A test performed by Roberto Castilho</div>
+  <div class="login-logo">
+    <img src="../../assets/img/Plan-A-Technologies-Dark-2.svg" alt="Plan A Logo" />
+  </div>
+  <div class="login-form-container">
+    <form autocomplete="off" class="login-form"[formGroup]="loginForm">
+      <h4>Login</h4>
+
+      <div class="login-form-input">
+        <div class="icon-container">
+          <ion-icon name="person-sharp"></ion-icon>
+        </div>
+        <ion-input autocomplete="off" placeholder="E-mail" type="text" formControlName="emailf"  required>
+        </ion-input>
+      </div>
+      <div class="validation-message" *ngIf="loginForm.controls['emailf'].invalid && (loginForm.controls['emailf'].dirty || loginForm.controls['emailf'].touched)">
+        <p>*enter a valid e-mail</p>
+      </div>
+
+
+      <div class="login-form-input senha-input">
+        <div class="icon-container password">
+          <ion-icon name="lock-closed"></ion-icon>
+        </div>
+        <ion-input autocomplete="password" placeholder="********" type="password" required formControlName="senhaf"
+           >
+        </ion-input>
+
+      </div>
+      <div class="validation-message" *ngIf="loginForm.controls['senhaf'].invalid && (loginForm.controls['senhaf'].dirty || loginForm.controls['senhaf'].touched)">
+        <p>*passwprd require and at least 6 character</p>
+      </div>
+
+
+
+      <ion-button (click)="onSubmit()" [disabled]="loginForm.invalid" class="login-form-button orange" type="submit">
+        Enter
+      </ion-button>
+
+
+    </form>
+
+  </div>
+</ion-content>

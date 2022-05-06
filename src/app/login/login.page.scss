@@ -1,0 +1,151 @@
+.login-bckg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-size: cover;
+
+}
+.login-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 149px;
+  background-color: #f2f2f2 ;
+  background-size: cover;
+  text-align: center;
+  font: normal  16px Roboto;
+
+}
+.login-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 109px 0 0;
+  align-items: center;
+
+  img {
+    width: 180px;
+
+    z-index: 999;
+  }
+}
+.login-form-container {
+  width: 100%;
+  padding-bottom: 38px;
+  h4 {
+    width: 70%;
+    margin: 0;
+    color: #ff5800;
+    text-align: left;
+    font: normal bold 16px Roboto;
+    margin-top: 26px;
+    margin-bottom: 5px;
+  }
+  ion-button {
+    text-transform: capitalize;
+    margin-top: 35px;
+    --background-activated:#ff5800;
+    --background-focused:#ff5800;
+    border-radius: 5px;
+    &.black {
+      &::part(native){
+        box-shadow: none;
+        background-color: #000000 ;
+      }
+    }
+    &.orange {
+      &::part(native){
+        box-shadow: none;
+        background-color: #ff5800 ;
+      }
+    }
+  }
+  .validation-message {
+    width: 70%;
+    text-align: start;
+    padding: 5px 0 0 0;
+    margin-bottom: 5px;
+    color: #f13b3b;
+    font-size: 12px;
+    p {
+      margin: 0;
+    }
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .login-form-input-padding {
+      padding: 0 15px !important;
+    }
+    .login-form-input {
+      height: 40px;
+      background: #ffffff1a 0% 0% no-repeat padding-box;
+      border: 1px solid #ff5800;
+      border-radius: 5px;
+      margin: 10px 0 0 0;
+      display: flex;
+      align-items: center;
+      width: 70%;
+      padding: 0 10px;
+      .icon-container {
+
+        ion-icon {
+          padding: 13px 10px;
+          color: #ff5800;
+        }
+      }
+      &.senha-input {
+        .icon-container.eye {
+          color: #ff5800;
+          font-size: 20px;
+          align-self: center;
+          justify-self: end;
+          ion-icon {
+            width: 14px;
+            padding: 10px 0px;
+            align-self: center;
+            display: flex;
+          }
+        }
+      }
+      ion-input {
+        background-color: transparent !important;
+        border-style: none;
+        height: 100%;
+        width: 100%;
+        &::placeholder {
+          color: #ffffff;
+        }
+        &:focus-visible {
+          outline: unset;
+        }
+      }
+    }
+
+
+    .login-form-button {
+
+      height: 35px;
+      width: 125px;
+    }
+
+    .login-message {
+      margin: 10px 0 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      span {
+        font-size: 15px;
+      }
+    }
+
+  }
+}
