@@ -14,7 +14,7 @@ export class ContriesService {
     ) { }
 
 
-  getCountries(token: string) {
+  getCountries() {
     return new Promise((res, rej) => {
       this.http.post(`${Config.SYSTEM.urlApi}Countries`, {}, { headers: this.utilService.headerPadrao() }).subscribe(d => {
         res(d);
