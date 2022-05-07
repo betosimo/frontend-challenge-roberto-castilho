@@ -9,8 +9,13 @@
 <ion-content [fullscreen]="true">
 
 
-  <div id="container">
-    <strong>Listar aqui os paises de https://m3o.com/login</strong>
-    <p>EndPoint <a target="_blank" rel="noopener noreferrer" href="https://m3o.com/login">https://m3o.com/login</a></p>
+  <div class="container">
+    <ion-list class="coutries">
+      <div class="country" *ngFor="let country  of mockCountries" >
+        <ion-item detail="true" (click)="detail(country.code)">{{country.name}}</ion-item>
+
+
+      </div>
+    </ion-list>
   </div>
 </ion-content>

@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  SYSTEM: {
+    urlApi: "https://api.m3o.com/v1/holidays/",
+    key: "N2FmNzRmYjMtNGI0ZC00ZDQ2LTllN2EtODJiYTcxYjM2Nzcy",
+
+
+ }
 };
 
 /*

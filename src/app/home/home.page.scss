@@ -4,30 +4,18 @@ ion-title{
     font: normal bold 16px Roboto;
 }
 
-#container {
-  text-align: center;
+.container {
+  color: #ff5800;
+  text-align: left;
+  font: normal bold 16px Roboto;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 5px;
+  ion-item {
+    color: #000;
+    text-align: left;
+    font: normal bold 16px Roboto;
+  }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }
