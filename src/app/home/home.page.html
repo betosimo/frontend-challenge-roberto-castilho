@@ -11,8 +11,8 @@
 
   <div class="container">
     <ion-list class="coutries">
-      <div class="country" *ngFor="let country  of mockCountries" >
-        <ion-item detail="true" (click)="detail(country.code)">{{country.name}}</ion-item>
+      <div class="country" *ngFor="let country  of countries" >
+        <ion-item detail="true" (click)="detail(country.code, country.name)">{{country.name}}</ion-item>
 
 
       </div>

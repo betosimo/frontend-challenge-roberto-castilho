@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
     this.loginForm = this.formbuilder.group({
 
       emailf:[this.email,[Validators.required, Validators.minLength(5),Validators.maxLength(60),
-        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
+        Validators.pattern('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+).(\.[a-z]{2,3})$')]],
       senhaf:[this.senha,[Validators.required, Validators.minLength(6),Validators.maxLength(20)]],
 
     })

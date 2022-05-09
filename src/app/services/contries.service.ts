@@ -23,4 +23,16 @@ export class ContriesService {
       });
     });
   }
+
+  getHolidays(data) {
+    return new Promise((res, rej) => {
+      this.http.post(`${Config.SYSTEM.urlApi}holidays/List`, data, { headers: this.utilService.headerPadrao() }).subscribe(d => {
+        res(d);
+      }, err => {
+        rej(err);
+      });
+    });
+  }
+
+
 }

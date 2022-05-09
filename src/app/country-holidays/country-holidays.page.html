@@ -1,12 +1,30 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button  icon="chevron-back-outline" text=""(click)="backHome()"></ion-back-button>
-      </ion-buttons>
-      <ion-title>{{code}} Holidays </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline" text="" (click)="backHome()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{name}} Holidays </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="container">
+    <ion-list class="holidays">
+      <div class="holiday" *ngFor="let holiday  of holidays">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{holiday.name}}</ion-card-title>
+            <ion-card-subtitle>{{holiday.date}}</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Locally know as: {{holiday.local_name}}
+          </ion-card-content>
+        </ion-card>
+
+
+      </div>
+    </ion-list>
+  </div>
 
 </ion-content>
